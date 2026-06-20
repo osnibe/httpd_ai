@@ -13,6 +13,10 @@ go build -o httpd main.go
 ./httpd
 ```
 
+## 停止
+
+`Ctrl+C`
+
 ## 動作確認
 
 ```sh

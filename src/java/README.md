@@ -12,6 +12,10 @@ javac Main.java
 java Main
 ```
 
+## 停止
+
+`Ctrl+C`
+
 ## 動作確認
 
 ```sh

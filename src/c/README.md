@@ -3,6 +3,7 @@
 ## ビルド
 
 ```sh
+cd src/c
 make
 ```
 

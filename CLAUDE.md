@@ -8,7 +8,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Build & Run
 
+各言語の実装は `src/<lang>/` 配下に閉じており、そのディレクトリ内でビルド・実行する。例（C言語実装）:
+
 ```sh
+cd src/c
 make          # ビルド → ./httpd
 make clean    # 生成物を削除
 ./httpd       # ポート 8080 で起動
@@ -18,10 +21,10 @@ make clean    # 生成物を削除
 
 ```
 src/c/main.c      TCPソケット生成・accept ループ・レスポンス送信（C言語実装）
-Makefile          C言語実装のビルド定義
+src/c/Makefile    C言語実装のビルド定義
 ```
 
-言語ごとに `src/<lang>/` ディレクトリを作り、同じ httpd を複数言語で実装していく構成。
+言語ごとに `src/<lang>/` ディレクトリを作り、同じ httpd を複数言語で実装していく構成。ビルド定義（Makefile など）も各言語ディレクトリ内に置く。
 
 - `create_server_socket()` — ソケット作成、`SO_REUSEADDR`、bind、listen
 - `handle_connection()` — クライアントからリクエストを読み、固定レスポンスを返す（HTTP パース未実装）

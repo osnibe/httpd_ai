@@ -1,7 +1,7 @@
 CC      = cc
 CFLAGS  = -Wall -Wextra -std=c11 -g
 TARGET  = httpd
-SRCS    = src/c/main.c
+SRCS    = main.c
 OBJS    = $(SRCS:.c=.o)
 
 $(TARGET): $(OBJS)
